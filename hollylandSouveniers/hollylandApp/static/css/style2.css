@@ -1,130 +1,8 @@
-* {
-    box-sizing: border-box
-}
-
-#search {
-    outline: none;
-    border: none;
-    display: inline-block
-}
-
-#burgundy {
-    color: rgb(153, 40, 59)
-}
-
-#orange,
-select,
-.btn {
-    color: orange
-}
-
-.fa-search {
-    font-size: 20px;
-    padding: 10px;
-    margin-bottom: 3px;
-    padding-right: 20px
-}
-
-.search-nav-item {
-    height: 40px
-}
-
-nav {
-    padding: 0px 100px
-}
-
-.fa-user-o,
-.fa-shopping-cart {
-    font-size: 20px;
-    padding: 4px
-}
-
-.form-group {
-    margin-bottom: 5px
-}
-
-label {
-    padding-left: 10px
-}
-
-.form-group:last-child {
-    margin-bottom: 0
-}
-
-h6 {
-    margin-bottom: 0px
-}
-
-#sort {
-    outline: none;
-    border: none
-}
-
-.btn {
-    border: 1px solid orange;
-    border-radius: 10px;
-    background-color: #fff
-}
-
-.btn:hover {
-    color: #fff;
-    background-color: orange
-}
-
-.card-body {
-    padding: 8px
-}
-
-.sign {
-    width: 25px;
-    height: 25px
-}
-
-.discount {
-    border: 1px solid orange;
-    border-radius: 5px;
-    width: 65px;
-    position: absolute;
-    top: 2%
-}
-
-@media(min-width:1200px) {
-    #search {
-        width: 300px;
-        padding: 5px;
-        padding-left: 20px
-    }
-
-    .search-nav-item {
-        margin-left: 400px;
-        width: 350px
-    }
-
-    .fa-user-o {
-        margin-left: 300px
-    }
-
-    /* .text {
-        display: none
-    } */
-
-    .fa-user-o,
-    .fa-shopping-cart {
-        font-size: 20px;
-        padding-left: 20px
-    }
-
-    #sidebar {
-        width: 30%;
-        padding: 20px;
-        float: left
-    }
-
-    #categories {
-        width: 100%;
+#products {
+        width: 70%;
         padding: 10px;
         margin: 0;
-
+        float: right
     }
 
     .card {
@@ -175,11 +53,11 @@ h6 {
         float: left
     }
 
-    #categories {
-        width: 100%;
+    #products {
+        width: 70%;
         padding: 10px;
         margin: 0;
-
+        float: right
     }
 
     .card {
@@ -239,11 +117,11 @@ h6 {
         float: left
     }
 
-    #categories {
-        width: 100%;
+    #products {
+        width: 65%;
         padding: 10px;
         margin: 0;
-
+        float: right
     }
 
     .card {
@@ -283,11 +161,11 @@ h6 {
         float: left
     }
 
-    #categories {
-        width: 100%;
+    #products {
+        width: 60%;
         padding: 10px;
         margin: 0;
-
+        float: right
     }
 
     .card {
@@ -343,73 +221,3 @@ h6 {
         margin-top: 2%
     }
 }
-
-.text-center .p-3 .text-orange{
-    color: orange;
-}
-
-.text-center .p-3 .text-orange:hover {
-    color: #fff;
-}
-
-.text-aaa{
-    color: orange;
-}
-
-.text-aaa:hover {
-    color: #fff;
-}
-
-
-
-
-
-
-.fa {
-    padding: 21px;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-    width: 73px;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-google {
-    background: #dd4b39;
-    color: white;
-  }
-  
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-  
-  .fa-pinterest {
-    background: #cb2027;
-    color: white;
-  }
