@@ -34,10 +34,11 @@ nav {
 }
 
 .fa-user-o,
-.fa-shopping-cart {
+.fa-sign-in {
     font-size: 20px;
     padding: 4px
 }
+
 
 .form-group {
     margin-bottom: 5px
@@ -104,12 +105,12 @@ h6 {
         margin-left: 300px
     }
 
-    /* .text {
-        display: none
-    } */
+    .nav-item .text:hover{
+        color: orange;
+    }
 
     .fa-user-o,
-    .fa-shopping-cart {
+    .fa-sign-in {
         font-size: 20px;
         padding-left: 20px
     }
@@ -128,7 +129,7 @@ h6 {
     }
 
     .card {
-        width: 300px;
+        /* width: 300px; */
         height: 330px;
         border: none
     }
@@ -165,8 +166,8 @@ h6 {
         margin-left: 160px
     }
 
-    .text {
-        display: none
+    .nav-item .text{
+        
     }
 
     #sidebar {
@@ -229,8 +230,8 @@ h6 {
         margin-left: 80px
     }
 
-    .text {
-        display: none
+    .nav-item .text{
+        
     }
 
     #sidebar {
@@ -257,8 +258,8 @@ h6 {
 }
 
 @media(min-width:576px) and (max-width:767px) {
-    .text {
-        display: none
+    .nav-item .text{
+        
     }
 
     .search-nav-item {
@@ -361,11 +362,7 @@ h6 {
 }
 
 
-
-
-
-
-.fa {
+.list-unstyled .fa {
     padding: 21px;
     font-size: 30px;
     text-align: center;
@@ -374,7 +371,7 @@ h6 {
     border-radius: 50%;
   }
   
-  .fa:hover {
+  .list-unstyled .fa:hover {
       opacity: 0.7;
   }
   
