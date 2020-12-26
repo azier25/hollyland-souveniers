@@ -138,5 +138,11 @@ def order(request):
     )
     return redirect('/cart')
 
+def visa(request):
+    return render(request,'last.html')
+
+def demo(request):
+    return render(request,'demo.html')
+
 
 

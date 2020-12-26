@@ -1,184 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{%extends 'main.html'%}
 
-    <meta charset="UTF-8">
-    <title></title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-<script src="https://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-<link href="https://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
-
-</head>
-<body>
+{%block content%}
 
 
 <div class="container">
-	<div class="row">
-	<form class="form-horizontal">
-<fieldset>
+    <form>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Name</label>
-  <div class="col-md-4">
-  <input id="" name="Name" type="text" placeholder="" class="form-control input-md" required="">
 
-  </div>
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Name</label>
+        <div class="col-md-8">
+          <input id="" name="Name" type="text" placeholder="" class="form-control input-md" required>
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Passport No</label>
+        <div class="col-md-8">
+          <input id="" name="pasaport No" type="text" placeholder="" class="form-control input-md" required>
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Postal</label>
+        <div class="col-md-8">
+          <input id="" name="Postal" type="text" placeholder="" class="form-control input-md" required>
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Telephone</label>
+        <div class="col-md-8">
+          <input id="" name="Telephne" type="text" placeholder="" class="form-control input-md" required>
+
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Adress</label>
+        <div class="col-md-8">
+          <input id="" name="Adress" type="text" placeholder="" class="form-control input-md" required>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Card Number</label>
+        <div class="col-md-8">
+          <input id="" name="Card Number" type="text" placeholder="" class="form-control input-md" required>
+
+        </div>
+      </div>
+
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Card Name</label>
+        <div class="col-md-8">
+          <input id="" name="Card Name" type="text" placeholder="" class="form-control input-md" required>
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-8 control-label" for="">Card CVC</label>
+        <div class="col-md-8">
+          <input id="" name="Card CVC" type="text" placeholder="" class="form-control input-md" required>
+
+        </div>
+      </div>
+
+        <div class="col-md-8 mt-3">
+          <button id="r_btnsend" name="r_btnsend" class="btn btn-primary btn-block"><i class="fa fa-credit-card"></i>Buy</button>
+
+
+
+      </div>
+
+    </form>
+
+
 </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Passport No</label>
-  <div class="col-md-4">
-  <input id="" name="pasaport No" type="text" placeholder="" class="form-control input-md" required="">
-
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Postal</label>
-  <div class="col-md-4">
-  <input id="" name="Postal" type="text" placeholder="" class="form-control input-md" required="">
-
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Telephone</label>
-  <div class="col-md-4">
-  <input id="" name="Telephne" type="text" placeholder="" class="form-control input-md" required="">
-
-  </div>
-</div>
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Adress</label>
-  <div class="col-md-4">
-    <textarea class="form-control" id="" name=""></textarea>
-  </div>
-</div>
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Card Number</label>
-  <div class="col-md-4">
-  <input id="" name="Card Number" type="text" placeholder="" class="form-control input-md" required="">
-
-  </div>
-</div>
-
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Card Name</label>
-  <div class="col-md-4">
-  <input id="" name="Card Name" type="text" placeholder="" class="form-control input-md" required="">
-
-  </div>
-</div>
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Card CVC</label>
-  <div class="col-md-4">
-  <input id="" name="Card CVC" type="text" placeholder="" class="form-control input-md" required="">
-
-  </div>
-</div>
-
-
-
-<div id="timecontainer" class="hide">
-<div class="avails">
-    <span class="colum">
-    <label class="radio-inline noselecttext" for="r_times-0">
-      10:00
-    </label>
-    </span>
-
-    <span class="colum">
-    <label class="radio-inline noselecttext" for="r_times-1">
-      10:10
-    </label>
-     </span>
-
-     <span class="colum">
-    <label class="radio-inline noselecttext active" for="r_times-2">
-            10:20
-
-    </label>
-     </span>
-
-     <span class="colum">
-    <label class="radio-inline noselecttext" for="r_times-3">
-            10:25
-
-    </label>
-     </span>
-
-          <span class="colum">
-    <label class="radio-inline noselecttext" for="r_times-3">
-            10:35
-
-    </label>
-     </span>
-
-          <span class="colum">
-    <label class="radio-inline noselecttext" for="r_times-3">
-          10:45
-    </label>
-     </span>
-  </div>
-  </div>
-    </div>
-</div>
-
-
-<!-- Multiple Radios (inline) -->
-<div class="form-group hide">
-  <label class="col-md-4 control-label" for="r_times">Randevu Saati</label>
-  <div class="col-md-4">
-    <label class="radio-inline" for="r_times-0">
-      <input type="radio" name="r_times" id="r_times-0" value="1" checked="checked">
-      1
-    </label>
-    <label class="radio-inline" for="r_times-1">
-      <input type="radio" name="r_times" id="r_times-1" value="2">
-      2
-    </label>
-    <label class="radio-inline" for="r_times-2">
-      <input type="radio" name="r_times" id="r_times-2" value="3">
-      3
-    </label>
-    <label class="radio-inline" for="r_times-3">
-      <input type="radio" name="r_times" id="r_times-3" value="4">
-      4
-    </label>
-  </div>
-</div>
-
-
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="r_btnsend"></label>
-  <div class="col-md-4">
-    <button id="r_btnsend" name="r_btnsend" class="btn btn-primary">Buy</button>
-          <div <i class="far fa-credit-card"></i></div>
-
-  </div>
-</div>
-
-</fieldset>
-</form>
-
-
-	</div>
-</div>
-
-</body>
-</html>
+{%endblock%}

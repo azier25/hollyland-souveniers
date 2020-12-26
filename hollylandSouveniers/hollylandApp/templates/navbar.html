@@ -10,7 +10,7 @@
 
         {%if request.session.customer_id%}
         <li class="nav-item">
-            <span class="text">Welcome {{ request.session.first_name }} {{ request.session.last_name }}</span>
+            <span class="text">Welcome, {{ request.session.first_name }} {{ request.session.last_name }}</span>
         </li>
         <li class="nav-item"><a class="nav-link" href="/cart"><span class="fa fa-shopping-cart fa-lg"></span></a> </li>
         <li class="nav-item"><a href="/logout" class="btn btn-primary">Logout</a></li>
