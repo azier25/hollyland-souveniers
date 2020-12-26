@@ -141,7 +141,7 @@ class Cart(models.Model):
 
     
     def __str__(self):
-        return  f"{self.quantity} of {self.product.title}"
+        return f"{self.quantity} of {self.product.name} by {self.customer.first_name} {self.customer.last_name}"
     
     def get_total_product_price(self):
         return self.quantity * self.product.price
@@ -161,11 +161,11 @@ class Order(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return  f"{self.status} {self.quantity} of {self.product.title}"
+        return  f"{self.status}  : {self.customer_id.first_name} {self.customer_id.last_name} : {self.total_price}"
 
     def get_total(self):
         total = 0
-        for order_product in self.products.all():
+        for order_product in self.product_id.all():
             total += order_product.price
         return total
 

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{%extends 'main.html'%}
+
+{%block content%}
+<!-- <!DOCTYPE html>
 <html lang="en">
 <html>
 
@@ -15,9 +18,9 @@
     <link rel="stylesheet" href="{%static 'css/style.css' %}">
 </head>
 
-<body>
+<body> -->
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom"> <a
+    <!-- <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom"> <a
             class="navbar-brand ml-2 font-weight-bold" href="{% url 'index'%}"><span id="burgundy">Holly</span><span
                 id="orange">land</span></a> <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarColor" aria-controls="navbarColor" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +34,7 @@
                 <li class="nav-item">
                     <span class="text">Welcome {{ request.session.first_name }} {{ request.session.last_name }}</span>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="/cart"><span class="fa fa-cart"></span><span
-                            class="text">Cart</span></a> </li>
+                <li class="nav-item"><a class="nav-link" href="/cart"><span class="fa fa-shopping-cart fa-lg"></span></a> </li>
                 <li class="nav-item"><a href="logout" class="btn btn-primary">Logout</a></li>
 
                 {%else%}
@@ -45,7 +47,7 @@
         </div>
     </nav>
 
-    <!-- Modal HTML -->
+
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-login">
             <div class="modal-content">
@@ -71,8 +73,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    {% if messages %}
+    </div> -->
+    <!-- {% if messages %}
     <div class="messages">
         {% for message in messages %} {% if message.tags == 'success' %}
         <div class="alert alert-success alert-dismissable">
@@ -84,7 +86,9 @@
         </div>
         {% endif %} {% endfor %}
     </div>
-    {% endif %}
+    {% endif %} -->
+
+
 
     <section id="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -119,17 +123,6 @@
 
         <section id="categories">
 
-            <!-- <div class="d-flex flex-row">
-            <div class="ml-auto mr-lg-4">
-              <div id="sorting" class="border rounded p-1 m-1">
-                <span class="text-muted">Sort by</span>
-                <select name="sort" id="sort">
-                  <option value="prcie"><b>Price</b></option>
-                  <option value="rating"><b>Rating</b></option>
-                </select>
-              </div>
-            </div>
-          </div> -->
             <div class="row">
                 {%for category in categories%}
                 <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
@@ -151,131 +144,6 @@
     </div>
 
 
-    <footer class="bg-light text-center text-lg-start">
-        <div class="container p-4 col-md-12" style="background-color: #383737 ;color: #e3dcdd;">
-            <section class="">
-                <div class="container">
-                    <div class="row">
-                        <!-- Section Titile -->
-                        <div class="col-md-12">
-                            <h1 class="section-title">Love to Hear From You</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Section Titile -->
-                        <div class="col-md-6 mt-3 ">
-                            <p>It is a long established fact that a reader will be distracted by the readable content of
-                                a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less normal distribution of letters, as opposed to using Content.</p>
 
-                            <div class="find-widget">
-                                Company: <a href="https://hostriver.ro">HostRiver</a>
-                            </div>
-                            <div class="find-widget">
-                                Address: <a href="#">4435 Berkshire Circle Knoxville</a>
-                            </div>
-                            <div class="find-widget">
-                                Phone: <a href="#">+ 879-890-9767</a>
-                            </div>
 
-                            <div class="find-widget">
-                                Website: <a href="https://uny.ro">www.uny.ro</a>
-                            </div>
-                            <div class="find-widget">
-                                Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
-                            </div>
-                        </div>
-                        <!-- contact form -->
-                        <div class="col-md-6">
-                            <form method="post">
-                                <!-- Name -->
-                                <div class="form-group label-floating">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label class="control-label" for="name">Name</label>
-                                        </div>
-                                        <div class="col-10">
-                                            <input class="form-control" id="name" type="text" name="name" required
-                                                data-error="Please enter your name">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- email -->
-                                <div class="form-group label-floating">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label class="control-label" for="email">Email</label>
-                                        </div>
-                                        <div class="col-10">
-                                            <input class="form-control" id="email" type="email" name="email" required
-                                                data-error="Please enter your Email">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- Subject -->
-                                <div class="form-group label-floating">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label class="control-label">Subject</label>
-                                        </div>
-                                        <div class="col-10">
-                                            <input class="form-control" id="msg_subject" type="text" name="subject"
-                                                required data-error="Please enter your message subject">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- Message -->
-                                <div class="form-group label-floating">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <label for="message" class="control-label">Message</label>
-                                        </div>
-                                        <div class="col-10">
-                                            <textarea class="form-control" rows="3" id="message" name="message" required
-                                                data-error="Write your message"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- Form Submit -->
-                                <div class="form-submit ">
-                                    <button class="btn btn-common" type="submit" id="form-submit"><i
-                                            class="material-icons mdi mdi-message-outline"></i> Send Message</button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="icons">
-                <ul class="list-unstyled mb-0">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-google"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-pinterest"></a>
-                </ul>
-            </div>
-            <div class="text-center p-3" style="background-color:#383737; color: #e3dcdd;">
-                © 2020 Copyright:
-                <a class="text-orange" href="#">Hollyland Souveniers</a>
-            </div>
-        </div>
-
-    </footer>
-</body>
-
-</html>
-
-</html>
+{%endblock%}

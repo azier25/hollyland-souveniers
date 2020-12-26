@@ -69,7 +69,7 @@ def login(request):
 def logout(request):
     request.session.clear()
     messages.success(request, "Log out successful!")
-    return redirect("/")
+    return redirect(index)
 
 def items(request,id):
     category = Category.objects.get(id = int(id))
@@ -80,7 +80,20 @@ def items(request,id):
 	}
     return render(request,'items.html',context)
 
-def cart(request,productid):
+def cart(request):
+    product = Product.objects.all()
+    customer_id = request.session['customer_id']
+    customer = Customer.objects.get(id = int(customer_id))
+    customer_cart = Cart.objects.filter(customer = customer)
+
+    context = {
+        'customer_cart':customer_cart,
+        'product':product,
+        }
+    return render(request,'cart.html' ,context)
+
+
+def addtocart(request,productid):
     product = Product.objects.get(id = productid)
     customer_id = request.session['customer_id']
     customer = Customer.objects.get(id = int(customer_id))
@@ -89,4 +102,26 @@ def cart(request,productid):
         customer = customer,
         product = product,
     )
-    return render(request,'cart.html')
+    return redirect('/cart')
+
+def delete_cart(request, cartid):
+    
+    cart = Cart.objects.get(id=cartid)
+    customer_id = cart.customer
+    cart.delete()
+    return redirect('/cart')
+
+
+# def order(request,productid):
+#     product = Product.objects.get(id = productid)
+#     customer_id = request.session['customer_id']
+#     customer = Customer.objects.get(id = int(customer_id))
+#     cart = Cart.objects.create(
+#         quantity = int(request.POST['quantity']),
+#         customer = customer,
+#         product = product,
+#     )
+#     return redirect('/cart')
+
+
+
