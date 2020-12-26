@@ -59,7 +59,7 @@
 								<button type="submit" class="btn btn-link btn-xs">
 									<span class="glyphicon glyphicon-trash"> </span>
                                 </button>
-                            </form>
+                                </form>
 							</div>
 						</div>
                     </div>
@@ -83,12 +83,15 @@
 				<div class="panel-footer">
 					<div class="row text-center">
 						<div class="col-xs-9">
-							<h4 class="text-right">Total <strong>$00.00</strong></h4>
+							<h4 class="text-right">Total <strong>${{total}}</strong></h4>
 						</div>
 						<div class="col-xs-3">
-							<button type="button" class="btn btn-success btn-block">
+                            <form action="/order/" method="post">{%csrf_token%}
+
+							<button type="submit" class="btn btn-success btn-block">
 								Checkout
-							</button>
+                            </button>
+                        </form>
 						</div>
 					</div>
 				</div>

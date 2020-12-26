@@ -85,10 +85,18 @@ def cart(request):
     customer_id = request.session['customer_id']
     customer = Customer.objects.get(id = int(customer_id))
     customer_cart = Cart.objects.filter(customer = customer)
+    # products = Cart.objects.filter(customer_id = customer.id)
+    # total = products.product.price.all.get_total_product_price()
+    total = 0
+    for total_price in customer_cart:
+        price = total_price.quantity * total_price.product.price
+        total += price
+        # print(total)
 
     context = {
         'customer_cart':customer_cart,
         'product':product,
+        'total':total
         }
     return render(request,'cart.html' ,context)
 
@@ -112,16 +120,23 @@ def delete_cart(request, cartid):
     return redirect('/cart')
 
 
-# def order(request,productid):
-#     product = Product.objects.get(id = productid)
-#     customer_id = request.session['customer_id']
-#     customer = Customer.objects.get(id = int(customer_id))
-#     cart = Cart.objects.create(
-#         quantity = int(request.POST['quantity']),
-#         customer = customer,
-#         product = product,
-#     )
-#     return redirect('/cart')
+def order(request):
+    # products = Cart.objects.get(id = productid)
+    customer_id = request.session['customer_id']
+    customer = Customer.objects.get(id = int(customer_id))
+    products = Cart.objects.filter(customer_id = customer.id)
+    # total = products.product.price.all.get_total_product_price()
+    total = 0
+    for product in products:
+        price = product.quantity * product.product.price
+        total += price
+
+    order = Order.objects.create(
+        total_price = total,
+        customer_id = customer,
+        product_id = products.all.id
+    )
+    return redirect('/cart')
 
 
 
