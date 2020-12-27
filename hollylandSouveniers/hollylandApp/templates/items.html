@@ -18,7 +18,7 @@
                 {%for product in products%}
                 <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
                     <div class="card">
-                        <img class="card-img-top w-100" src="{{product.image.url}}">
+                        <img class="card-img-top w-100" style="width: 250px; height: 250px;" src="{{product.image.url}}">
                         <div class="card-body">
                             <h5><b>{{product.name}}</b> </h5>
                             <form action="/addtocart/{{product.id}}" method="post">{%csrf_token%}
@@ -33,8 +33,11 @@
                                     </div>
                                 </div>
 
-
+                                {%if request.session.customer_id%}
                                 <button type="submit" class="btn w-100 rounded my-2">Add to cart</button>
+                                {%else%}
+                                <button type="button" class="btn w-100 rounded my-2">Add to cart</button>
+                                {%endif%}
                             </form>
 
                         </div>
