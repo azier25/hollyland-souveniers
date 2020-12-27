@@ -17,8 +17,8 @@
             <div class="row">
                 {%for product in products%}
                 <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
-                    <div class="card">
-                        <img class="card-img-top w-100" style="width: 250px; height: 250px;" src="{{product.image.url}}">
+                    <div class="card m-3">
+                        <img class="card-img-top w-100" src="{{product.image.url}}">
                         <div class="card-body">
                             <h5><b>{{product.name}}</b> </h5>
                             <form action="/addtocart/{{product.id}}" method="post">{%csrf_token%}
